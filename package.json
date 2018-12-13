@@ -20,6 +20,7 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.18",
+    "reactstrap": "^6.5.0",
     "typography": "^0.16.18",
     "typography-theme-fairy-gates": "^0.16.18"
   },
