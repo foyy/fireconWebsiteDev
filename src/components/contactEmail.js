@@ -45,6 +45,19 @@ const ContactEmail = () => (
       </Col>
       <Col>
         <FormGroup>
+          <Label>Phone #</Label>
+          <Input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+          <span class="note">Format: 123-456-7890</span>
+        </FormGroup>
+      </Col>
+      <Col>
+        <FormGroup>
           <Label for="exampleText">Text Area</Label>
           <Input type="textarea" name="message" id="exampleText" />
         </FormGroup>

@@ -6,6 +6,7 @@ import Image from '../components/image'
 import Checkout from '../components/checkout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from '../components/navbar'
+import ContactEmail from '../components/contactEmail'
 
 const IndexPage = () => (
   <Layout>
@@ -19,7 +20,7 @@ const IndexPage = () => (
       <Image />
     </div>
     <Checkout />
-
+    <ContactEmail />
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
