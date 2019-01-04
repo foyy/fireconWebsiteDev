@@ -2,7 +2,6 @@ import React from 'react'
 
 // hardcoded amount (in US cents) to charge users
 // you could set this variable dynamically to charge different amounts
-const amount = 2500
 const cardStyles = {
   display: 'flex',
   flexDirection: 'column',
@@ -29,10 +28,15 @@ const buttonStyles = {
 // Below is where the checkout component is defined.
 // It has several functions and some default state variables.
 const Checkout = class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.textInput = React.createRef();
+  }
   state = {
     disabled: false,
     buttonText: 'BUY NOW',
     paymentMessage: '',
+    amount: 0
   }
 
   resetButton() {
@@ -44,6 +48,7 @@ const Checkout = class extends React.Component {
       // You’ll need to add your own Stripe public key to the `checkout.js` file.
       // key: 'pk_test_STRIPE_PUBLISHABLE_KEY',
       key: 'pk_test_sACrOzSJjY8jKgGu2ZQ9vBFo',
+
       closed: () => {
         this.resetButton()
       },
@@ -52,41 +57,57 @@ const Checkout = class extends React.Component {
 
   openStripeCheckout(event) {
     event.preventDefault()
-    this.setState({ disabled: true, buttonText: 'WAITING...' })
-    this.stripeHandler.open({
-      name: 'Demo Product',
-      amount: amount,
-      description: 'A product well worth your time',
-      token: token => {
-        fetch(
-          `https://g0q0sby444.execute-api.us-east-1.amazonaws.com/dev/checkout`,
-          {
-            method: 'POST',
-            mode: 'no-cors',
-            body: JSON.stringify({
-              token,
-              amount,
-            }),
-            headers: new Headers({
-              'Content-Type': 'application/json',
-            }),
-          }
-        )
-          .then(res => {
-            console.log('Transaction processed successfully')
-            this.resetButton()
-            this.setState({ paymentMessage: 'Payment Successful!' })
-            return res
-          })
-          .catch(error => {
-            console.error('Error:', error)
-            this.setState({ paymentMessage: 'Payment Failed' })
-          })
-      },
+    //so they are forced to enter an amount
+    if (this.state.amount > 1) {
+
+      this.setState({ disabled: true, buttonText: 'WAITING...' })
+      this.stripeHandler.open({
+        name: 'Invoice Payment',
+        amount: this.state.amount,
+        description: 'Invoice Payment',
+        token: token => {
+          let amount = this.state.amount
+          fetch(
+            `https://g0q0sby444.execute-api.us-east-1.amazonaws.com/dev/checkout`,
+            {
+              method: 'POST',
+              mode: 'no-cors',
+              body: JSON.stringify({
+                token,
+                amount,
+              }),
+              headers: new Headers({
+                'Content-Type': 'application/json',
+              }),
+            }, () => { console.log('callback me baby') }
+          )
+            .then(res => {
+              console.log('Transaction processed successfully, response from Stripe----->', res)
+              this.resetButton()
+              this.setState({ paymentMessage: 'Payment Successful!' })
+              return res
+            })
+            .catch(error => {
+              console.error('Error:', error)
+              this.setState({ paymentMessage: 'Payment Failed' })
+            })
+        },
+      })
+    }
+  }
+
+
+
+  changeAmount(event) {
+    event.preventDefault()
+    this.setState({
+      amount: this.textInput.value * 100
     })
+
   }
 
   render() {
+    let textInput
     return (
       <div style={cardStyles}>
         <h4>Spend your Money!</h4>
@@ -94,6 +115,10 @@ const Checkout = class extends React.Component {
           Use any email, 4242 4242 4242 4242 as the credit card number, any 3
           digit number, and any future date of expiration.
         </p>
+        <form action="" onSubmit={event => this.changeAmount(event)} >
+          <input name='amount' type='text' ref={(input) => this.textInput = input} />
+          <input type="submit" value="Submit" />
+        </form >
         <button
           style={buttonStyles}
           onClick={event => this.openStripeCheckout(event)}
@@ -102,7 +127,7 @@ const Checkout = class extends React.Component {
           {this.state.buttonText}
         </button>
         {this.state.paymentMessage}
-      </div>
+      </div >
     )
   }
 }
