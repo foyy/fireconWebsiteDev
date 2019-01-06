@@ -39,7 +39,8 @@ const Checkout = class extends React.Component {
     disabled: false,
     buttonText: 'BUY NOW',
     paymentMessage: '',
-    amount: 0
+    amount: 0,
+    invoice: 18
   }
 
   resetButton() {
@@ -78,17 +79,18 @@ const Checkout = class extends React.Component {
     //   console.log('we done messed up', err)
     // })
 
-    let templateParams = {
-      'invoice_number': '555',
-      'amount': 'a million'
-    }
+    //  this works!
+    // let templateParams = {
+    //   'invoice_number': '555',
+    //   'amount': 'a million'
+    // }
 
-    emailjs.send('gmail', 'template_2VgsUDkQ_clone', templateParams, 'user_Ox28ZDXC8k3uwKZ9g3jcw')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-      }, (err) => {
-        console.log('FAILED...', err);
-      });
+    // emailjs.send('gmail', 'template_2VgsUDkQ_clone', templateParams, 'user_Ox28ZDXC8k3uwKZ9g3jcw')
+    //   .then((response) => {
+    //     console.log('SUCCESS!', response.status, response.text);
+    //   }, (err) => {
+    //     console.log('FAILED...', err);
+    //   });
 
 
   }
@@ -105,6 +107,7 @@ const Checkout = class extends React.Component {
         description: 'Invoice Payment',
         token: token => {
           let amount = this.state.amount
+          let invoice = this.state.invoice
           fetch(
             `https://g0q0sby444.execute-api.us-east-1.amazonaws.com/dev/checkout`,
             {
@@ -113,6 +116,7 @@ const Checkout = class extends React.Component {
               body: JSON.stringify({
                 token,
                 amount,
+                invoice
               }),
               headers: new Headers({
                 'Content-Type': 'application/json',
