@@ -1,4 +1,7 @@
 import React from 'react'
+import axios from 'axios'
+import * as emailjs from 'emailjs-com';
+
 
 // hardcoded amount (in US cents) to charge users
 // you could set this variable dynamically to charge different amounts
@@ -53,9 +56,44 @@ const Checkout = class extends React.Component {
         this.resetButton()
       },
     })
+
+
+    // var data = {
+    //   service_id: '<gmail>',
+    //   template_id: '<template_2VgsUDkQ_clone>',
+    //   user_id: '<user_Ox28ZDXC8k3uwKZ9g3jcw>',
+    //   template_params: {
+    //     'invoice_number': 'James',
+    //     'amount': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+    //   }
+    // };
+    // axios({
+    //   method: 'post',
+    //   url: 'https://api.emailjs.com/api/v1.0/email/send',
+    //   data: JSON.stringify(data),
+    //   contentType: 'application/json'
+    // }).then(() => {
+    //   console.log('Your mail is sent!!!!!!!');
+    // }).catch(err => {
+    //   console.log('we done messed up', err)
+    // })
+
+    let templateParams = {
+      'invoice_number': '555',
+      'amount': 'a million'
+    }
+
+    emailjs.send('gmail', 'template_2VgsUDkQ_clone', templateParams, 'user_Ox28ZDXC8k3uwKZ9g3jcw')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (err) => {
+        console.log('FAILED...', err);
+      });
+
+
   }
 
-  openStripeCheckout(event) {
+  async openStripeCheckout(event) {
     event.preventDefault()
     //so they are forced to enter an amount
     if (this.state.amount > 1) {
@@ -79,7 +117,7 @@ const Checkout = class extends React.Component {
               headers: new Headers({
                 'Content-Type': 'application/json',
               }),
-            }, () => { console.log('callback me baby') }
+            },
           )
             .then(res => {
               console.log('Transaction processed successfully, response from Stripe----->', res)
@@ -105,6 +143,7 @@ const Checkout = class extends React.Component {
     })
 
   }
+
 
   render() {
     let textInput
