@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+import Image from '../components/imageComponents/image'
 import Checkout from '../components/checkout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Navbar from '../components/navbar'
 import ContactEmail from '../components/contactEmail'
 
 const IndexPage = () => (
