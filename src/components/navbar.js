@@ -33,9 +33,9 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <a href="/" class="navbar-left">
-            <img src="../images/gatsby-icon.jpg" style={{ width: 50, heigth: 50 }} />
+        <Navbar color="#FFFFFF" light expand="md">
+          <a href="/" className="navbar-left">
+            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 250, heigth: 200, marginTop: 15 }} />
           </a>
 
           <NavbarBrand href="/">
@@ -43,7 +43,7 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem className="navbar items">
+              <NavItem className="navbar items" >
                 <NavLink href="/services/">Services</NavLink>
               </NavItem>
               <NavItem className="navbar items">

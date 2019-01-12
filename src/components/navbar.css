@@ -5,3 +5,11 @@
 .navbar-brand>img {
   padding: 7px 14px;
 }
+
+html{
+  background-color: #FFFFFF;
+}
+
+.navbarItems{
+  color: red;
+}
