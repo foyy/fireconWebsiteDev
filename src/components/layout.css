@@ -2,7 +2,15 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  display:grid;
+  box-sizing: border-box;
+  grid-gap: 10px;
 }
+
+.r1c1 {
+  color: blue
+}
+
 body {
   margin: 0;
 }

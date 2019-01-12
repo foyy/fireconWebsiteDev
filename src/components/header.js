@@ -3,15 +3,22 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Navbar from '../components/navbar'
 import HeaderImage from '../components/imageComponents/headerImage'
+import Image from '../components/imageComponents/image'
+
 
 
 const Header = ({ siteTitle }) => (
-  <div id="testingContainer">
+  <div className='header'>
+    {/* <div className="header">
+      testing this css module stuff
+    </div> */}
     <Navbar />
+    <HeaderImage />
+    {/* <div style={{
+      margin: '0 auto',
+      padding: '1.45rem 1.0875rem',
+    }}>
 
-    <div style={{margin: '0 auto',
-          padding: '1.45rem 1.0875rem',}}>
-      <HeaderImage />
 
     </div>
     <div
@@ -36,7 +43,7 @@ const Header = ({ siteTitle }) => (
           padding: '1.70rem 3.0rem',
         }}
       />
-    </div>
+    </div> */}
   </div>
 )
 

@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap'
+import Image from '../components/imageComponents/image'
 
 import './navbar.css'
 
@@ -33,7 +34,12 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Firecon</NavbarBrand>
+          <a href="/" class="navbar-left">
+            <img src="../images/gatsby-icon.jpg" style={{ width: 50, heigth: 50 }} />
+          </a>
+
+          <NavbarBrand href="/">
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

@@ -30,7 +30,7 @@ const HeaderImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "generalStyling/navbarBackgroundBanner.png" }) {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 250) {
+            fluid(maxWidth: 900, maxHeight: 250) {
               ...GatsbyImageSharpFluid
               }
           }
