@@ -4,6 +4,7 @@ import Navbar from '../components/navbar'
 import Layout from '../components/layout'
 import ContactEmail from '../components/contactEmail'
 import Checkout from '../components/checkout'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const About = () => (
   <Layout>
