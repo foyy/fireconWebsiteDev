@@ -35,7 +35,7 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="#FFFFFF" light expand="md">
           <a href="/" className="navbar-left">
-            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 250, heigth: 200, marginTop: 15 }} />
+            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 275, heigth: 225, marginTop: 15 }} />
           </a>
 
           <NavbarBrand href="/">

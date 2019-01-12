@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Navbar from '../components/navbar'
-
 import Layout from '../components/layout'
 import ContactEmail from '../components/contactEmail'
 import Checkout from '../components/checkout'
