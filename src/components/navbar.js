@@ -12,7 +12,6 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap'
-import Image from '../components/imageComponents/image'
 
 import './navbar.css'
 
@@ -37,17 +36,16 @@ export default class Example extends React.Component {
           <a href="/" className="navbar-left">
             <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 275, heigth: 225, marginTop: 15 }} />
           </a>
-
           <NavbarBrand href="/">
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem className="navbar items" >
-                <NavLink href="/services/">Services</NavLink>
+                <NavLink href="/systems/">Systems</NavLink>
               </NavItem>
-              <NavItem className="navbar items">
-                <NavLink href="/about/">About</NavLink>
+              <NavItem className="navbar items" >
+                <NavLink href="/services/">Services</NavLink>
               </NavItem>
               <NavItem className="navbar items">
                 <NavLink href="/contact/">Contact</NavLink>

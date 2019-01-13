@@ -7,8 +7,35 @@ html {
   grid-gap: 10px;
 }
 
+
+.wrapper {
+	width: 97%;
+	max-width: 1200px;
+	background-color: #fff;
+	margin: 2%;
+	display: grid;
+	grid-gap: 10px;
+}
+
+.centeredh1s {
+  display: flex;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.manufacturers {
+  display: grid;
+  
+}
+
 .r1c1 {
-  color: blue
+  grid-column: 1/4;
+  size: 1rem;
+}
+.r1c2 {
+  grid-column: 2/4;
+  size: 4rem;
+
 }
 
 body {
@@ -70,6 +97,8 @@ h1 {
   font-size: 2em;
   margin: .67em 0;
 }
+
+
 mark {
   background-color: #ff0;
   color: #000;
