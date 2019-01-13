@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
 import Layout from '../components/layout'
 import Image from '../components/imageComponents/image'
 import Checkout from '../components/checkout'
@@ -9,12 +8,7 @@ import ContactEmail from '../components/contactEmail'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>
-      hai coco it's me, be, you buy fire sounds and water jets in the not floor
-      wall?
-    </p>
+    <h1>Firecon of Texas</h1>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <Image />
     </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from '../components/layout'
-import ContactEmail from '../components/contactEmail'
 import Image from '../components/imageComponents/image'
 
 
