@@ -15,6 +15,15 @@ import {
 
 import './navbar.css'
 
+const navbarItem = {
+  color: '#B23711',
+  fontSize: '115%',
+  marginLeft: '35px',
+  marginRight: '40px',
+  fontWeight: 'bolder'
+
+}
+
 export default class Example extends React.Component {
   constructor(props) {
     super(props)
@@ -41,9 +50,9 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <div style={{ paddingTop: '9.2px', paddingRight: '8px' }}>
+              <div >
                 <UncontrolledDropdown nav inNavbar >
-                  <DropdownToggle nav caret>
+                  <DropdownToggle style={navbarItem} nav caret>
                     Systems
                 </DropdownToggle>
                   <DropdownMenu right>
@@ -53,15 +62,15 @@ export default class Example extends React.Component {
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </div>
-              <NavItem className="navbar items" >
-                <NavLink href="/services/">Services</NavLink>
+              <NavItem  >
+                <NavLink style={navbarItem} href="/services/">Services</NavLink>
               </NavItem>
 
-              <NavItem className="navbar items">
-                <NavLink href="/contact/">Contact</NavLink>
+              <NavItem >
+                <NavLink style={navbarItem} href="/contact/">Contact</NavLink>
               </NavItem>
-              <NavItem className="navbar items">
-                <NavLink href="/payment/">Payment</NavLink>
+              <NavItem >
+                <NavLink style={navbarItem} href="/payment/">Payment</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

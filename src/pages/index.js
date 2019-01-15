@@ -1,21 +1,20 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Layout from '../components/layout'
-import Image from '../components/imageComponents/image'
-import Checkout from '../components/checkout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ContactEmail from '../components/contactEmail'
+import SupressionSystem from '../components/imageComponents/SupressionSystem'
+import GoogleMap from '../components/googleMap'
+
+
 
 const IndexPage = () => (
   <Layout>
     <h1>Firecon of Texas</h1>
     <h2></h2>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
+      <SupressionSystem />
     </div>
-    <Checkout />
-    <ContactEmail />
-    <Link to="/page-2/">Go to page 2</Link>
+    <GoogleMap />
+
   </Layout>
 )
 

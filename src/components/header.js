@@ -1,9 +1,7 @@
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import Navbar from '../components/navbar'
 import HeaderImage from '../components/imageComponents/headerImage'
-import Image from '../components/imageComponents/image'
 
 
 
@@ -13,7 +11,9 @@ const Header = ({ siteTitle }) => (
       testing this css module stuff
     </div> */}
     <Navbar />
+
     <HeaderImage />
+
 
     {/* <div style={{
       margin: '0 auto',

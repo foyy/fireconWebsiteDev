@@ -30,7 +30,7 @@ const HeaderImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "generalStyling/Austin_Skyline_-_Morning_Sun_(5269793786).jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800, maxHeight: 250) {
+            fluid(maxWidth: 1500, maxHeight: 400) {
               ...GatsbyImageSharpFluid
               }
           }
