@@ -34,19 +34,29 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="#FFFFFF" light expand="md">
           <a href="/" className="navbar-left">
-            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 275, heigth: 225, marginTop: 15 }} />
+            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 375, heigth: 450, marginTop: 15 }} />
           </a>
           <NavbarBrand href="/">
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem className="navbar items" >
-                <NavLink href="/systems/">Systems</NavLink>
-              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Systems
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>Fire Alarm</DropdownItem>
+                  <DropdownItem>Fire Supression + Special Hazards</DropdownItem>
+                  <DropdownItem>Extinguishers</DropdownItem>
+                  <DropdownItem>BUTT</DropdownItem>
+
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <NavItem className="navbar items" >
                 <NavLink href="/services/">Services</NavLink>
               </NavItem>
+
               <NavItem className="navbar items">
                 <NavLink href="/contact/">Contact</NavLink>
               </NavItem>
@@ -62,16 +72,15 @@ export default class Example extends React.Component {
 }
 
 // IF I NEED A DROPDOWN MENU:
-{
-  /* <UncontrolledDropdown nav inNavbar>
-  <DropdownToggle nav caret>
-    Options
-                </DropdownToggle>
-  <DropdownMenu right>
-    <DropdownItem>Option 1</DropdownItem>
-    <DropdownItem>Option 2</DropdownItem>
-    <DropdownItem divider />
-    <DropdownItem>Reset</DropdownItem>
-  </DropdownMenu>
-</UncontrolledDropdown> */
-}
+
+// <UncontrolledDropdown nav inNavbar>
+//   <DropdownToggle nav caret>
+//     Options
+//                 </DropdownToggle>
+//   <DropdownMenu right>
+//     <DropdownItem>Option 1</DropdownItem>
+//     <DropdownItem>Option 2</DropdownItem>
+//     <DropdownItem divider />
+//     <DropdownItem>Reset</DropdownItem>
+//   </DropdownMenu>
+// </UncontrolledDropdown> 

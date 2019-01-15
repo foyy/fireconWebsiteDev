@@ -7,16 +7,19 @@ import Checkout from '../components/checkout'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const About = () => (
-  <Layout>
-    <h1>Pay your invoices below </h1>
+  <div>
+    <Layout>
+      <h1>Pay your invoices below </h1>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et nunc
-      vel arcu fringilla elementum. Pellentesque id elementum nibh. Donec eget
-      fermentum nulla, non fringilla quam. Ut volutpat, leo sed accumsan
-      ullamcorper, lectus elit mollis eros, nec ullamcorper lacus diam in elit.
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et nunc
+        vel arcu fringilla elementum. Pellentesque id elementum nibh. Donec eget
+        fermentum nulla, non fringilla quam. Ut volutpat, leo sed accumsan
+        ullamcorper, lectus elit mollis eros, nec ullamcorper lacus diam in elit.
     </p>
-    <br />
+      <br />
+
+    </Layout>
     <Checkout
       style={{
         display: 'block',
@@ -24,7 +27,7 @@ const About = () => (
         marginRight: 'auto',
       }}
     />
-  </Layout>
+  </div>
 )
 
 export default About
