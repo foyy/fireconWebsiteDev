@@ -1,3 +1,5 @@
+
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -10,6 +12,11 @@ html{
   background-color: #FFFFFF;
 }
 
-.navbarItems{
+.navItems{
   color: red;
 }
+
+.navbar items{
+  color: rebeccapurple
+}
+

@@ -14,6 +14,7 @@ const Header = ({ siteTitle }) => (
     </div> */}
     <Navbar />
     <HeaderImage />
+
     {/* <div style={{
       margin: '0 auto',
       padding: '1.45rem 1.0875rem',

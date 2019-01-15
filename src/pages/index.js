@@ -9,6 +9,7 @@ import ContactEmail from '../components/contactEmail'
 const IndexPage = () => (
   <Layout>
     <h1>Firecon of Texas</h1>
+    <h2></h2>
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <Image />
     </div>

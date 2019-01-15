@@ -41,18 +41,18 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Systems
+              <div style={{ paddingTop: '9.2px', paddingRight: '8px' }}>
+                <UncontrolledDropdown nav inNavbar >
+                  <DropdownToggle nav caret>
+                    Systems
                 </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Fire Alarm</DropdownItem>
-                  <DropdownItem>Fire Supression + Special Hazards</DropdownItem>
-                  <DropdownItem>Extinguishers</DropdownItem>
-                  <DropdownItem>BUTT</DropdownItem>
-
-                </DropdownMenu>
-              </UncontrolledDropdown>
+                  <DropdownMenu right>
+                    <DropdownItem>Fire Alarm</DropdownItem>
+                    <DropdownItem>Fire Supression + Special Hazards</DropdownItem>
+                    <DropdownItem>Extinguishers</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </div>
               <NavItem className="navbar items" >
                 <NavLink href="/services/">Services</NavLink>
               </NavItem>
@@ -70,17 +70,3 @@ export default class Example extends React.Component {
     )
   }
 }
-
-// IF I NEED A DROPDOWN MENU:
-
-// <UncontrolledDropdown nav inNavbar>
-//   <DropdownToggle nav caret>
-//     Options
-//                 </DropdownToggle>
-//   <DropdownMenu right>
-//     <DropdownItem>Option 1</DropdownItem>
-//     <DropdownItem>Option 2</DropdownItem>
-//     <DropdownItem divider />
-//     <DropdownItem>Reset</DropdownItem>
-//   </DropdownMenu>
-// </UncontrolledDropdown> 

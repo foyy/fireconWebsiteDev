@@ -9,24 +9,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const About = () => (
   <div>
     <Layout>
-      <h1>Pay your invoices below </h1>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et nunc
-        vel arcu fringilla elementum. Pellentesque id elementum nibh. Donec eget
-        fermentum nulla, non fringilla quam. Ut volutpat, leo sed accumsan
-        ullamcorper, lectus elit mollis eros, nec ullamcorper lacus diam in elit.
-    </p>
-      <br />
-
+      <Checkout />
     </Layout>
-    <Checkout
-      style={{
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      }}
-    />
+    
   </div>
 )
 

@@ -28,9 +28,9 @@ const HeaderImage = () => {
   return <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "generalStyling/navbarBackgroundBanner.png" }) {
+        placeholderImage: file(relativePath: { eq: "generalStyling/Austin_Skyline_-_Morning_Sun_(5269793786).jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 900, maxHeight: 250) {
+            fluid(maxWidth: 800, maxHeight: 250) {
               ...GatsbyImageSharpFluid
               }
           }
