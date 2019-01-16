@@ -5,7 +5,7 @@ import SupressionSystem from '../components/imageComponents/SupressionSystem'
 import TextBar from '../components/textBar'
 const image = {
   flex: '1 0 40%',
-  margin: '5px',
+  margin: '10px',
   marginTop: '15%',
 }
 const text = {
@@ -16,7 +16,7 @@ const text = {
 
 const bar = {
   flex: '1 0 90%',
-  marginBottom: '20%',
+  marginBottom: '34%',
   marginTop: '5%'
 
 

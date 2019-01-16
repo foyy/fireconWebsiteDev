@@ -1,4 +1,5 @@
 import React from 'react'
+import BlackLogoImage from '../components/imageComponents/BlackLogoImage'
 
 // const wrapper = {
 //   display: 'flex',
@@ -19,15 +20,37 @@ import React from 'react'
 // }
 
 const bar = {
-  height: '26%',
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  flexFlow: 'row wrap',
+  justifyContent: 'space-between',
+  height: '50%',
   width: '100%',
   left: '0%',
   right: '3%',
-  backgroundColor: '#9B211C',
+  backgroundColor: '#B30924',
   paddingBottom: '10%',
   position: 'absolute',
+  paddingBottom: '5%',
+  paddingTop: '2%',
 }
 
+const text = {
+  flex: '1 0 40%',
+  color: 'white',
+  fontSize: '400%',
+  textAlign: 'center',
+  paddingTop: '1%',
+}
+
+const image = {
+  flex: '1 0 40%',
+  maxHeight: '150px',
+  maxWidth: '150px',
+  marginLeft: '5%',
+  marginTop: '3%'
+}
 // const text = {
 //   alignSelf: 'center',
 //   color: 'white',
@@ -35,8 +58,12 @@ const bar = {
 
 const TextBar = () => (
   <div>
+
     <div style={bar}>
-      <p>text here</p>
+      <div style={image}>
+        <BlackLogoImage />
+      </div>
+      <p style={text}>Company review or motto here</p>
     </div>
   </div>
 

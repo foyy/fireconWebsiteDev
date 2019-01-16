@@ -24,6 +24,10 @@ const navbarItem = {
 
 }
 
+const navbar = {
+  top: 0,
+}
+
 export default class Example extends React.Component {
   constructor(props) {
     super(props)
@@ -41,7 +45,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="#FFFFFF" light expand="md">
+        <Navbar color="#FFFFFF" light expand="md" style={navbar}>
           <a href="/" className="navbar-left">
             <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 375, heigth: 450, marginTop: 15 }} />
           </a>
