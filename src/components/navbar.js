@@ -18,8 +18,8 @@ import './navbar.css'
 const navbarItem = {
   color: '#B23711',
   fontSize: '115%',
-  paddingRight: '.8rem',
-  paddingLeft: '.8rem',
+  paddingRight: '2.8rem',
+  paddingLeft: '2.8rem',
   fontWeight: 'bolder'
 
 }
