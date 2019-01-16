@@ -5,7 +5,7 @@ import ContactEmail from '../components/contactEmail'
 
 const About = () => (
   <Layout>
-    <h1>We'd Love To Hear From You</h1>
+    <h1 style={{ marginTop: '2%' }}>We'd Love To Hear From You</h1>
     <ContactEmail />
   </Layout>
 )

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import {
   Container,
   Col,
@@ -10,22 +9,13 @@ import {
   Button,
 } from 'reactstrap'
 
-import Layout from '../components/layout'
 
-// <form
-//   class="pure-form pure-form-stacked"
-//   method="POST"
-//   action="https://formspree.io/hunterleeves@gmail.com"
-// >
-//   <input type="email" name="email" placeholder="Your email" />
-//   <br />
-//   <textarea name="message" placeholder="Test Message" />
-//   <br />
-//   <button type="submit">Send Test</button>
-// </form>
+const contact = {
+  marginTop: '5%',
+}
 
 const ContactEmail = () => (
-  <Container className="App">
+  <Container style={contact}>
     <h2>Contact Firecon</h2>
     <Form
       className="form"

@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -33,12 +34,27 @@ const Layout = ({ children }) => (
           style={{
             margin: '0 auto',
             maxWidth: 960,
+            minWidth: 200,
             padding: '0px 1.0875rem 1.45rem',
             paddingTop: 0,
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            flexFlow: 'row wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center'
           }}
         >
           {children}
         </div>
+        <Footer style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'wrap',
+          flexFlow: 'row wrap',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }} />
       </>
     )}
   />
