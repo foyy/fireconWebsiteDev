@@ -43,6 +43,8 @@ const Layout = ({ children, barText }) => (
             flexFlow: 'row wrap',
             justifyContent: 'space-between',
             alignItems: 'center',
+            fontFamily: 'times new roman, serif'
+
           }}
         >
           {children}

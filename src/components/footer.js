@@ -17,7 +17,7 @@ const text = {
 }
 
 const iframe = {
-  width: '780px',
+  width: '500px',
   height: '305px',
   marginTop: '3%'
 }
@@ -27,11 +27,11 @@ const Footer = () => (
 
     <div style={text}>
       <p>123-456-7890</p>
-      <p>address here</p>
+      <p>Footer address here</p>
       <ul>
-        <li>  Text here </li>
-        <li>  Text here </li>
-        <li>  Text here </li>
+        <li>  Footer Text here </li>
+        <li>  Footer Text here </li>
+        <li>  Footer Text here </li>
       </ul>
     </div >
 

@@ -23,14 +23,14 @@ import Img from 'gatsby-image'
 //   }
 // `
 
-const HeaderImage = () => {
+const ZeroBurnImage = () => {
 
   return <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "generalStyling/Austin_Skyline_-_Morning_Sun_(5269793786).jpg" }) {
+        placeholderImage: file(relativePath: { eq: "manus/ZERO BURN (2015_08_06 16_25_58 UTC).png" }) {
           childImageSharp {
-            fluid(maxWidth: 1500, maxHeight: 455) {
+            fluid(maxWidth: 400, maxHeight: 400) {
               ...GatsbyImageSharpFluid
               }
           }
@@ -40,5 +40,5 @@ const HeaderImage = () => {
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 }
-export default HeaderImage
+export default ZeroBurnImage
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import BlackLogoImage from '../components/imageComponents/BlackLogoImage'
-
+import WhiteLogoImage from '../components/imageComponents/WhiteLogoImage'
 // const wrapper = {
 //   display: 'flex',
 //   flexDirection: 'column',
@@ -42,14 +42,16 @@ const text = {
   fontSize: '400%',
   textAlign: 'center',
   paddingTop: '1%',
+  alignSelf: 'center',
 }
 
 const image = {
   flex: '1 0 40%',
-  maxHeight: '150px',
-  maxWidth: '150px',
-  marginLeft: '5%',
-  marginTop: '3%'
+  maxHeight: '200px',
+  maxWidth: '200px',
+  marginLeft: '3%',
+  marginTop: '1%',
+  alignSelf: 'center',
 }
 // const text = {
 //   alignSelf: 'center',
@@ -61,7 +63,7 @@ const TextBar = () => (
 
     <div style={bar}>
       <div style={image}>
-        <BlackLogoImage />
+        <WhiteLogoImage />
       </div>
       <p style={text}>Company review or motto here</p>
     </div>

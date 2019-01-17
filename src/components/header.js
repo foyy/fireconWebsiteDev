@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Navbar from '../components/navbar'
 import HeaderImage from '../components/imageComponents/headerImage'
-import TextBar from '../components/textBar'
 
 const bar = {
   backgroundColor: 'rgba(202, 9, 41,.9)',

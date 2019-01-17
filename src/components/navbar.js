@@ -61,9 +61,9 @@ export default class Example extends React.Component {
                     Systems
                 </DropdownToggle>
                   <DropdownMenu right>
-                    <DropdownItem>Fire Alarm</DropdownItem>
-                    <DropdownItem>Fire Supression + Special Hazards</DropdownItem>
-                    <DropdownItem>Extinguishers</DropdownItem>
+                    <DropdownItem href="/Systems/firealarm/">Fire Alarm</DropdownItem>
+                    <DropdownItem href="/Systems/firesupressions/">Fire Supression + Special Hazards</DropdownItem>
+                    <DropdownItem href="/Systems/extinguishers/">Extinguishers</DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </div>
@@ -77,9 +77,7 @@ export default class Example extends React.Component {
               <NavItem >
                 <NavLink style={navbarItem} href="/payment/">Payment</NavLink>
               </NavItem>
-              <NavItem >
-                <NavLink style={navbarItem} href="/systems/">Systems</NavLink>
-              </NavItem>
+
             </Nav>
           </Collapse>
         </Navbar>

@@ -13,10 +13,15 @@ import {
 const contact = {
   marginTop: '5%',
 }
+const text = {
+  textAlign: 'left',
+  fontSize: '240%',
+  marginBottom: '5%',
+}
 
 const ContactEmail = () => (
   <Container style={contact}>
-    <h2>Contact Firecon</h2>
+    <h2 style={text}>We'd Love To Hear From You</h2>
     <Form
       className="form"
       method="POST"
@@ -52,7 +57,7 @@ const ContactEmail = () => (
           <Input type="textarea" name="message" id="exampleText" />
         </FormGroup>
       </Col>
-      <Button type="submit">Submit</Button>
+      <Button type="submit" style={{ backgroundColor: 'rgb(85 , 85, 85)', marginLeft: '13px' }}>Submit</Button>
     </Form>
   </Container>
 )
