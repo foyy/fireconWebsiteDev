@@ -7,7 +7,7 @@ import Header from './header'
 import Footer from './footer'
 import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, barText }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -29,7 +29,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet >
-        <Header className='r1c1' siteTitle={data.site.siteMetadata.title} />
+        <Header className='r1c1' siteTitle={data.site.siteMetadata.title} barText={barText} />
         <div
           style={{
             margin: '0 auto',
@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
             flexWrap: 'wrap',
             flexFlow: 'row wrap',
             justifyContent: 'space-between',
-            alignItems: 'center'
+            alignItems: 'center',
           }}
         >
           {children}

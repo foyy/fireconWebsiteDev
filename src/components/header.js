@@ -2,10 +2,22 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Navbar from '../components/navbar'
 import HeaderImage from '../components/imageComponents/headerImage'
+import TextBar from '../components/textBar'
 
+const bar = {
+  backgroundColor: 'rgba(202, 9, 41,.9)',
+  minHeight: '10rem',
+  width: '100%',
+  display: 'absolute',
+  fontSize: '300%',
+}
 
+const text = {
+  color: 'rgba(25, 25, 25,.9)',
+  textAlign: 'center',
+}
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, barText }) => (
   <div className='header'>
     {/* <div className="header">
       testing this css module stuff
@@ -13,6 +25,9 @@ const Header = ({ siteTitle }) => (
     <Navbar />
 
     <HeaderImage />
+    {/* <div style={bar}>
+      <p style={text}> {barText}</p>
+    </div> */}
 
 
     {/* <div style={{

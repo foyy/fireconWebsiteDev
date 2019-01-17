@@ -4,8 +4,7 @@ import Layout from '../components/layout'
 import ContactEmail from '../components/contactEmail'
 
 const About = () => (
-  <Layout>
-    <h1 style={{ marginTop: '2%' }}>We'd Love To Hear From You</h1>
+  <Layout barText="We Would Love To Hear From You">
     <ContactEmail />
   </Layout>
 )

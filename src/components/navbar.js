@@ -16,11 +16,12 @@ import {
 import './navbar.css'
 
 const navbarItem = {
-  color: '#B23711',
+  color: 'rgba(178, 55, 17, .92)',
   fontSize: '115%',
   paddingRight: '2.8rem',
   paddingLeft: '2.8rem',
-  fontWeight: 'bolder'
+  fontWeight: 'bolder',
+  fontFamily: 'Arial, Helvetica'
 
 }
 
@@ -75,6 +76,9 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem >
                 <NavLink style={navbarItem} href="/payment/">Payment</NavLink>
+              </NavItem>
+              <NavItem >
+                <NavLink style={navbarItem} href="/systems/">Systems</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

@@ -6,7 +6,7 @@ const wrapper = {
   flexWrap: 'wrap',
   flexFlow: 'row wrap',
   justifyContent: 'space-around',
-  backgroundColor: 'grey',
+  backgroundColor: 'rgb(85 , 85, 85)',
   marginTop: '1%',
   marginBottom: '.5%',
 }
