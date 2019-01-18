@@ -22,7 +22,8 @@ const wrapper = {
   alignItems: 'flex-start',
   width: '80%',
   height: '20%',
-  margin: 'auto'
+  margin: 'auto',
+  marginTop: '34%'
 }
 
 const image = {
