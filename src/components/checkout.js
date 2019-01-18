@@ -34,6 +34,8 @@ const buttonStyles = {
   marginLeft: '10px',
   marginBottom: '5px',
   alignSelf: 'center',
+  fontFamily: 'times new roman, serif'
+
 }
 
 const wrapper = {
@@ -197,8 +199,8 @@ const Checkout = class extends React.Component {
         <div style={cardStyles}>
           {/* <button onClick={() => console.log('here is your state->', this.state)}></button> */}
 
-          <h1 style={{ alignSelf: 'center' }}>Pay your Invoice</h1>
-          <h6 style={{ paddingLeft: '12px', paddingBottom: '10px' }}>*You are required to input your Company Name, Invoice#, and Amount before proceeding to payment*</h6>
+          <h1 style={{ alignSelf: 'center', fontFamily: 'times new roman' }}>Pay your Invoice</h1>
+          <h6 style={{ paddingLeft: '12px', paddingBottom: '10px', fontFamily: 'times new roman' }}>*You are required to input your Company Name, Invoice#, and Amount before proceeding to payment*</h6>
 
           {/* new form----> */}
           <Form className="form" onSubmit={event => this.changeAmount(event)}>

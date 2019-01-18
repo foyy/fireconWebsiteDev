@@ -9,14 +9,14 @@ import LicensingImage from '../components/imageComponents/LicensingImage'
 
 const image = {
   flex: '1 0 40%',
-  margin: '20px',
+  margin: '2%',
   marginTop: '5%',
   alignSelf: 'center',
 }
 
 const bigImage = {
   flex: '1 0 60%',
-  margin: '10px',
+  margin: '2%',
   marginTop: '5%',
   alignSelf: 'center',
   borderRadius: '20%'
@@ -24,7 +24,7 @@ const bigImage = {
 
 const text = {
   flex: '1 0 50%',
-  margin: '15px',
+  margin: '2%',
   fontSize: 'large',
   alignSelf: 'center',
 }
@@ -32,7 +32,7 @@ const text = {
 
 const smallText = {
   flex: '1 0 30%',
-  margin: '5px',
+  margin: '2%',
   fontSize: 'large',
   alignSelf: 'center',
 }
@@ -56,10 +56,11 @@ const singleLine = {
   marginBottom: '15%',
   textAlign: 'center',
   fontSize: '600%',
+  fontFamily: 'times new roman, serif'
 }
 
 const IndexPage = () => (
-  <Layout>
+  <Layout >
 
     <h1 style={singleLine}>Who We Are</h1>
 
@@ -124,9 +125,7 @@ const IndexPage = () => (
 
 
 
-    <p style={text}>
-      Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
-      Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
+    <p style={smallText}>
       Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
       Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
       Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
