@@ -118,7 +118,7 @@ const Checkout = class extends React.Component {
       this.setState({ disabled: true, buttonText: 'WAITING...', errorMessage: false })
       this.stripeHandler.open({
         name: 'Firecon Invoice Payment',
-        amount: this.state.amount,
+        amount: (this.state.amount * 100),
         description: `Invoice #${this.state.invoice} Payment`,
         billingAddress: true,
         zipCode: true,
