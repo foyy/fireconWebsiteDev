@@ -23,14 +23,14 @@ import Img from 'gatsby-image'
 //   }
 // `
 
-const Blueprints = () => {
+const BlueTankImage = () => {
 
   return <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "generalStyling/architecture-1857175_1280.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "generalStyling/supressionOnSystemsPage.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800, maxHeight: 800) {
+            fluid(maxWidth: 240, maxHeight: 240) {
               ...GatsbyImageSharpFluid
               }
           }
@@ -40,6 +40,4 @@ const Blueprints = () => {
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 }
-export default Blueprints
-
-
+export default BlueTankImage

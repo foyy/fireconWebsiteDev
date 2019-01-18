@@ -7,7 +7,6 @@ import HochikiImage from '../components/imageComponents/manufacturers/HochikiIma
 import NfpaImage from '../components/imageComponents/NfpaImage'
 import LicensingImage from '../components/imageComponents/LicensingImage'
 import MinimalExtinguisher from '../components/imageComponents/MinimalExtinguisher'
-import Blueprints from '../components/imageComponents/Blueprints'
 
 
 const image = {
@@ -108,7 +107,6 @@ const IndexPage = () => (
     <h1 style={singleLine}>Where We Work</h1>
 
     <div style={bigImage}>
-      <Blueprints />
     </div>
 
     <p style={smallText}>
