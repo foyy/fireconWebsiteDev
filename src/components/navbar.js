@@ -20,8 +20,7 @@ const navbarItem = {
   fontSize: '120%',
   paddingRight: '1.8rem',
   paddingLeft: '1.8rem',
-  fontWeight: 'bolder',
-  fontFamily: 'times new roman, serif'
+  fontFamily: 'helvetica, serif'
 
 }
 

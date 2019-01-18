@@ -7,7 +7,7 @@ import HochikiImage from '../components/imageComponents/manufacturers/HochikiIma
 import NfpaImage from '../components/imageComponents/NfpaImage'
 import LicensingImage from '../components/imageComponents/LicensingImage'
 import MinimalExtinguisher from '../components/imageComponents/MinimalExtinguisher'
-
+import BlueprintImage from '../components/imageComponents/BlueprintImage'
 
 const image = {
   flex: '1 0 40%',
@@ -19,7 +19,7 @@ const image = {
 const bigImage = {
   flex: '1 0 60%',
   margin: '2%',
-  marginTop: '5%',
+  marginTop: '3%',
   alignSelf: 'center',
   borderRadius: '20%'
 }
@@ -27,7 +27,7 @@ const bigImage = {
 const text = {
   flex: '1 0 50%',
   margin: '2%',
-  fontSize: 'large',
+  fontSize: '160%',
   alignSelf: 'center',
 }
 
@@ -35,7 +35,7 @@ const text = {
 const smallText = {
   flex: '1 0 27%',
   margin: '2%',
-  fontSize: 'large',
+  fontSize: '150%',
   alignSelf: 'center',
 }
 
@@ -55,8 +55,8 @@ const wrapper = {
 }
 const singleLine = {
   flex: '1 0 98%',
-  marginTop: '15%',
-  marginBottom: '15%',
+  marginTop: '13%',
+  marginBottom: '13%',
   textAlign: 'center',
   fontSize: '600%',
   fontFamily: 'times new roman, serif'
@@ -72,7 +72,7 @@ const IndexPage = () => (
       <NfpaImage />
     </div>
     <p style={text}>
-      Firecon of Texas is a family owned, operational life safety company that
+      Firecon of Texas is a family owned and operated life safety company that
       has nearly 3 generations worth of experience behind it in the state of Texas.
       Our technicians are knowledgeable and trained in servicing and installing
       the latest technologies in fire alarm and suppression systems.
@@ -82,22 +82,12 @@ const IndexPage = () => (
       <TextBar />
     </div>
 
-    <p style={text}> More about us info here
-      More about us info here more about us info here more about us info here
-      More about us info here more about us info here more about us info here
-      More about us info here more about us info here more about us info here
-      More about us info here more about us info here more about us info here
-      More about us info here more about us info here more about us info here
-      more about us info here
-      More about us info here more about us info here more about us info here
-      more about us info here
-      more about us info here
-      More about us info here
-      More about us info here
-      more about us info here
-      more about us info here
-      more about us info here
-      </p>
+    <p style={text}>
+      Firecon of Texas offers high quality design, repairs, monitoring,
+      additions, renovations, inspections and pressure testing. We prioritize safety and quality
+      above all in every service that we offer. Protecting lives, property,
+      and peace of mind is always our greatest goal.
+    </p>
     <div style={image}>
       <MinimalExtinguisher />
     </div>
@@ -107,21 +97,27 @@ const IndexPage = () => (
     <h1 style={singleLine}>Where We Work</h1>
 
     <div style={bigImage}>
+      <BlueprintImage />
     </div>
 
     <p style={smallText}>
       <ul>
-        <li>Location wHere</li>
-        <li>Location Here</li>
-        <li>Location Here</li>
-        <li>Location Here</li>
-
-
+        <li>Commercial Offices</li>
+        <li>Apartments</li>
+        <li>Retail</li>
+        <li>Hotels</li>
+        <li>Schools</li>
+        <li>Hospitals</li>
+        <li>Data Centers</li>
+        <li>Daycares</li>
+        <li>Assisted Living</li>
+        <li>Hotels</li>
+        <li>And More</li>
       </ul>
     </p>
 
 
-    <h1 style={singleLine}>Licensing</h1>
+    <h1 style={singleLine}>Licenses</h1>
 
 
 
