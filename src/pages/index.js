@@ -113,7 +113,7 @@ const IndexPage = () => (
 
     <p style={smallText}>
       <ul>
-        <li>Location Here</li>
+        <li>Location wHere</li>
         <li>Location Here</li>
         <li>Location Here</li>
         <li>Location Here</li>
