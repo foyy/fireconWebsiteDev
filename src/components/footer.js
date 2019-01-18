@@ -14,12 +14,13 @@ const wrapper = {
 const text = {
   alignSelf: 'center',
   color: 'white',
+  fontFamily: 'times new roman, serif'
 }
 
 const iframe = {
-  width: '500px',
-  height: '305px',
-  marginTop: '3%'
+  width: '35rem',
+  height: '12rem',
+  marginTop: '3%',
 }
 
 const Footer = () => (

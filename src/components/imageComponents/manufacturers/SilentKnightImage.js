@@ -30,7 +30,7 @@ const SilentKnightImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "manus/silentknight_byHoneywell_color (2015_08_06 16_25_58 UTC).jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 400) {
+            fluid(maxWidth: 1900, maxHeight: 950) {
               ...GatsbyImageSharpFluid
               }
           }

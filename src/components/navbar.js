@@ -17,11 +17,11 @@ import './navbar.css'
 
 const navbarItem = {
   color: 'rgba(178, 55, 17, .92)',
-  fontSize: '115%',
+  fontSize: '120%',
   paddingRight: '2.8rem',
   paddingLeft: '2.8rem',
   fontWeight: 'bolder',
-  fontFamily: 'Arial, Helvetica'
+  fontFamily: 'times new roman, serif'
 
 }
 

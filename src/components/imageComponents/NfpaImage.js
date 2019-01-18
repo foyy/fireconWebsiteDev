@@ -23,14 +23,14 @@ import Img from 'gatsby-image'
 //   }
 // `
 
-const SystemSensorImage = () => {
+const Image = () => {
 
   return <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "manus/System Sensor (2015_08_06 16_25_58 UTC).jpg" }) {
+        placeholderImage: file(relativePath: { eq: "generalStyling/nfpa_logo.5942a119dcb25.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 500, maxHeight: 150) {
+            fluid(maxWidth: 800, maxHeight: 800) {
               ...GatsbyImageSharpFluid
               }
           }
@@ -40,5 +40,5 @@ const SystemSensorImage = () => {
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 }
-export default SystemSensorImage
+export default Image
 

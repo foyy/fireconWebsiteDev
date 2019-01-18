@@ -30,7 +30,7 @@ const FikeImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "manus/FikeLogoBK (2015_08_18 23_05_11 UTC).jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1000, maxHeight: 1000) {
+            fluid(maxWidth: 900, maxHeight: 400) {
               ...GatsbyImageSharpFluid
               }
           }

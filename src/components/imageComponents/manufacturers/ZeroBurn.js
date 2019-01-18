@@ -30,7 +30,7 @@ const ZeroBurnImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "manus/ZERO BURN (2015_08_06 16_25_58 UTC).png" }) {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 400) {
+            fluid(maxWidth: 800, maxHeight: 240) {
               ...GatsbyImageSharpFluid
               }
           }

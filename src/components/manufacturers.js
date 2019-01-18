@@ -11,6 +11,9 @@ import SouthwestImage from '../components/imageComponents/manufacturers/Southwes
 import SystemSensor from '../components/imageComponents/manufacturers/SystemSensor'
 import WheelockImage from '../components/imageComponents/manufacturers/WheelockImage'
 import ZeroBurn from '../components/imageComponents/manufacturers/ZeroBurn'
+import Image from '../components/imageComponents/image'
+import SupressionSystem from '../components/imageComponents/SupressionSystem'
+import HeaderImage from '../components/imageComponents/HeaderImage'
 
 
 
@@ -27,7 +30,7 @@ const wrapper = {
 }
 
 const image = {
-  flex: '1 1 15%',
+  flex: '1 0 22%',
   margin: '5px',
   borderStyle: 'solid',
   borderWidth: '5px',
@@ -58,15 +61,15 @@ const Manufacturers = () => (
     <p style={space}></p>
 
     <p style={image}> <FikeImage /> </p>
-    <p style={image}> <CwsiImage /></p>
-    <p style={image}> <FireLiteImage /></p>
+    <p style={image}> <WheelockImage /></p>
     <p style={image}> <HochikiImage /></p>
     <p style={image}> <MircomImage /></p>
+    <p style={image}> <CwsiImage /></p>
     <p style={image}> <ProtectoWireImage /></p>
-    <p style={image}> <SilentKnightImage /></p>
+    <p style={image}>  <ZeroBurn /></p>
     <p style={image}> <SystemSensor /></p>
-    <p style={image}> <WheelockImage /></p>
-    <p style={image}> <ZeroBurn /></p>
+    <p style={image}> <FireLiteImage /></p>
+    <p style={image}><SilentKnightImage /></p>
   </div>
 
 )

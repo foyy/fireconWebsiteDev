@@ -30,7 +30,7 @@ const FireLiteImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "manus/FireLite_byHoneywell (2015_08_06 16_25_58 UTC).jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 400) {
+            fluid(maxWidth: 3000 , maxHeight: 750) {
               ...GatsbyImageSharpFluid
               }
           }

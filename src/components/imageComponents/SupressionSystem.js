@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-const SupressionSystem = () => {
+const NfpaSystem = () => {
 
   return <StaticQuery
     query={graphql`
@@ -19,5 +19,5 @@ const SupressionSystem = () => {
     render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
   />
 }
-export default SupressionSystem
+export default NfpaSystem
 

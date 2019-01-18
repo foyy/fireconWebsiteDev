@@ -28,9 +28,9 @@ const CwsiImage = () => {
   return <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "manus/CWSI (2015_08_18 23_05_11 UTC).jpg" }) {
+        placeholderImage: file(relativePath: { eq: "generalStyling/CWSI (2015_08_18 23_05_11 UTC).jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 240, maxHeight: 240) {
+            fluid(maxWidth: 900, maxHeight: 400) {
               ...GatsbyImageSharpFluid
               }
           }

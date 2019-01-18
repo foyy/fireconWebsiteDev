@@ -30,7 +30,7 @@ const WheelockImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "manus/wheelock (2015_08_06 16_25_58 UTC).png" }) {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 400) {
+            fluid(maxWidth: 500, maxHeight: 100) {
               ...GatsbyImageSharpFluid
               }
           }

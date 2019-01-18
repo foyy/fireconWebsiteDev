@@ -30,16 +30,15 @@ const bar = {
   left: '0%',
   right: '3%',
   backgroundColor: '#B30924',
-  paddingBottom: '10%',
+  paddingBottom: '2%',
   position: 'absolute',
-  paddingBottom: '5%',
   paddingTop: '2%',
 }
 
 const text = {
   flex: '1 0 40%',
   color: 'white',
-  fontSize: '400%',
+  fontSize: '250%',
   textAlign: 'center',
   paddingTop: '1%',
   alignSelf: 'center',
@@ -47,10 +46,9 @@ const text = {
 
 const image = {
   flex: '1 0 40%',
-  maxHeight: '200px',
-  maxWidth: '200px',
+  maxHeight: '230px',
+  maxWidth: '230px',
   marginLeft: '3%',
-  marginTop: '1%',
   alignSelf: 'center',
 }
 // const text = {
@@ -59,13 +57,12 @@ const image = {
 // }
 
 const TextBar = () => (
-  <div>
-
-    <div style={bar}>
+  <div >
+    <div style={bar} >
       <div style={image}>
         <WhiteLogoImage />
       </div>
-      <p style={text}>Company review or motto here</p>
+      <p style={text}>Protecting Lives, Property, and Peace of Mind</p>
     </div>
   </div>
 

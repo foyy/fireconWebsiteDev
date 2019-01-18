@@ -30,7 +30,7 @@ const HochikiImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "manus/Hochiki (2015_08_18 23_05_11 UTC).png" }) {
           childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 400) {
+            fluid(maxWidth: 2000, maxHeight: 1000) {
               ...GatsbyImageSharpFluid
               }
           }
