@@ -17,8 +17,8 @@ const text = {
 }
 
 const iframe = {
-  width: '35rem',
-  height: '12rem',
+  width: '42rem',
+  height: '16rem',
   marginTop: '3%',
 }
 

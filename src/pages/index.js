@@ -72,9 +72,9 @@ const IndexPage = () => (
       <NfpaImage />
     </div>
     <p style={text}>
-      Firecon of Texas is a family owned and operated life safety company that
-      has nearly 3 generations worth of experience behind it in the state of Texas.
-      Our technicians are knowledgeable and trained in servicing and installing
+      Firecon of Texas is a family owned and operated life safety company with
+      nearly 3 generations worth of experience in the state of Texas.
+      Our knowledgable technicians are trained in servicing and installing
       the latest technologies in fire alarm and suppression systems.
       </p>
 

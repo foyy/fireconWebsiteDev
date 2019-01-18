@@ -23,7 +23,7 @@ const wrapper = {
   width: '80%',
   height: '20%',
   margin: 'auto',
-  marginTop: '34%'
+  marginTop: '15%'
 }
 
 const image = {
@@ -31,16 +31,18 @@ const image = {
   margin: '5px',
   borderStyle: 'solid',
   borderWidth: '5px',
+  borderColor: 'black'
 }
 
 const text = {
   flex: '1 1 100%',
-  fontSize: '400%',
+  fontSize: '300%',
   textAlign: 'center',
   margin: 'auto',
   alignSelf: ' center',
   justifyContent: 'center',
-  fontFamily: 'times new roman, serif'
+  fontFamily: 'helvetica, serif',
+  fontWeight: 'bold',
 }
 
 const space = {
@@ -51,23 +53,23 @@ const space = {
 const Manufacturers = () => (
 
   <div style={wrapper}>
-    <p style={text}>Our Trusted Partners</p>
+    <p style={text}>Our Trusted Manufacturers</p>
     <p style={space}></p>
     <p style={space}></p>
     <p style={space}></p>
     <p style={space}></p>
-
-    <p style={image}> <FikeImage /> </p>
-    <p style={image}> <WheelockImage /></p>
-    <p style={image}> <HochikiImage /></p>
-    <p style={image}> <MircomImage /></p>
-    <p style={image}> <CwsiImage /></p>
-    <p style={image}> <ProtectoWireImage /></p>
-    <p style={image}>  <ZeroBurn /></p>
-    <p style={image}> <SystemSensor /></p>
-    <p style={image}> <FireLiteImage /></p>
-    <p style={image}><SilentKnightImage /></p>
-  </div>
+    <a href="https://www.fike.com/solutions/fire-protection/fire-suppression/" style={image}>
+      <FikeImage /> </a>
+    <a href="http://www.cooperindustries.com/content/public/en/products.html" style={image}> <WheelockImage /></a>
+    <a href="https://www.hochikiamerica.com/fire-alarm" style={image}> <HochikiImage /></a>
+    <a href="https://www.mircom.com/" style={image}> <MircomImage /></a>
+    <a href="http://www.cwsifire.com/" style={image}> <CwsiImage /></a>
+    <a href="https://www.protectowire.com/" style={image}> <ProtectoWireImage /></a>
+    <a href="https://www.linkedin.com/company/zeroburn/" style={image}>  <ZeroBurn /></a>
+    <a href="https://www.systemsensor.com/en-us/Pages/welcome.aspx" style={image}> <SystemSensor /></a>
+    <a href="https://www.honeywell.com/buildings/security-and-fire" style={image}> <FireLiteImage /></a>
+    <a href="https://www.honeywell.com/buildings/security-and-fire" style={image}><SilentKnightImage /></a>
+  </div >
 
 )
 
