@@ -15,7 +15,7 @@ const image = {
 const text = {
   flex: '1 0 20%',
   margin: '5px',
-  fontSize: '150%',
+  fontSize: '250%',
   paddingTop: '4%',
   listStyleType: 'none',
   alignSelf: 'center',

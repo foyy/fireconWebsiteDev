@@ -11,9 +11,7 @@ import SouthwestImage from '../components/imageComponents/manufacturers/Southwes
 import SystemSensor from '../components/imageComponents/manufacturers/SystemSensor'
 import WheelockImage from '../components/imageComponents/manufacturers/WheelockImage'
 import ZeroBurn from '../components/imageComponents/manufacturers/ZeroBurn'
-import Image from '../components/imageComponents/image'
 import SupressionSystem from '../components/imageComponents/SupressionSystem'
-import HeaderImage from '../components/imageComponents/HeaderImage'
 
 
 
