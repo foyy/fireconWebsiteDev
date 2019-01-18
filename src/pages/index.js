@@ -39,8 +39,9 @@ const smallText = {
 
 
 const bar = {
-  flex: '1 1 90%',
-  paddingBottom: '43%',
+  flex: '0 1 90%',
+  paddingTop: '25%',
+  paddingBottom: '65%',
   marginTop: '5%'
 }
 const space = {

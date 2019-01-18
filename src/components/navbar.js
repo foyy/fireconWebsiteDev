@@ -48,7 +48,7 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="#FFFFFF" light expand="md" style={navbar}>
           <a href="/" className="navbar-left">
-            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 375, heigth: 450, marginTop: 15 }} />
+            <img src="https://res.cloudinary.com/foyy/image/upload/v1547325121/FCTX_Logo_Red.jpg" style={{ width: 325, heigth: 375, marginTop: 15, marginLeft: 20 }} />
           </a>
           <NavbarBrand href="/">
           </NavbarBrand>
@@ -75,7 +75,7 @@ export default class Example extends React.Component {
                 <NavLink style={navbarItem} href="/contact/">Contact</NavLink>
               </NavItem>
               <NavItem >
-                <NavLink style={navbarItem} href="/payment/">Payment</NavLink>
+                <NavLink style={navbarItem} href="/payment/">Pay Now</NavLink>
               </NavItem>
 
             </Nav>

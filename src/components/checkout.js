@@ -20,7 +20,8 @@ const cardStyles = {
   borderRadius: '6px',
   maxWidth: '800px',
   textAlign: 'left',
-  marginTop: '5%',
+  marginTop: '8%',
+  marginBottom: '8%'
 }
 const buttonStyles = {
   fontSize: '100%',
@@ -200,7 +201,7 @@ const Checkout = class extends React.Component {
         <div style={cardStyles}>
           {/* <button onClick={() => console.log('here is your state->', this.state)}></button> */}
 
-          <h1 style={{ alignSelf: 'center', fontFamily: 'times new roman', fontSize: '360%' }}>Pay your Invoice</h1>
+          <h1 style={{ alignSelf: 'center', fontFamily: 'times new roman', fontSize: '360%' }}>Pay Your Invoice</h1>
           <h6 style={{ paddingLeft: '12px', paddingBottom: '10px', fontFamily: 'times new roman' }}>*You are required to input your Company Name, Invoice#, and Amount before proceeding to payment*</h6>
 
           {/* new form----> */}
