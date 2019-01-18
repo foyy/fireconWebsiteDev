@@ -6,25 +6,25 @@ import LicensingImage from '../components/imageComponents/LicensingImage'
 import SupressionSystem from '../components/imageComponents/SupressionSystem'
 import InspectionImage from '../components/imageComponents/InspectionImage'
 import ServicesImage from '../components/imageComponents/ServicesImage'
+import SprinklerImage from '../components/imageComponents/SprinklerImage'
 
 const image = {
-  flex: '1 0 50%',
+  flex: '1 0 90%',
   margin: '5px',
   marginTop: '5%',
 }
 const text = {
-  flex: '1 0 20%',
-  margin: '5px',
-  fontSize: '125%',
-  paddingTop: '4%',
-  listStyleType: 'none',
-  alignSelf: 'center',
+  flex: '1 0 70%',
+  marginTop: '5%',
+  marginBottom: '5%',
+  fontSize: '255%',
+  textAlign: 'center'
 
 }
 
 const textTwo = {
   alignSelf: 'center',
-  flex: '1 0 90%',
+  flex: '1 0 100%',
   margin: '5px',
   paddingTop: '4%',
   fontSize: '350%',
@@ -35,26 +35,25 @@ const space = {
 }
 
 const Services = () => (
-  <div>
-    <Layout>
-      <h2 style={textTwo}>Services We Offer</h2>
-      <div style={image}>
-        <ServicesImage />
-      </div>
-      <div style={space}></div>
-      <ul style={text}>
-        <li>Design</li>
-        <li>Sales</li>
-        <li>Repair</li>
-        <li>Monitoring</li>
-        <li>Additions</li>
-        <li>Renovations</li>
-        <li>Inspections</li>
-        <li>Pressure Testing</li>
-      </ul>
+  <Layout>
+    <h2 style={textTwo}>Services We Offer</h2>
+    <div style={image}>
+      <SprinklerImage />
+    </div>
 
-    </Layout>
-  </div>
+
+    <div style={text}>
+      <p  >Design</p>
+      <p >Sales</p>
+      <p >Repair</p>
+      <p >Monitoring</p>
+      <p >Additions</p>
+      <p >Renovations</p>
+      <p >Inspections</p>
+      <p >Pressure Testing</p>
+    </div>
+
+  </Layout>
 )
 
 export default Services
