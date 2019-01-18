@@ -9,13 +9,13 @@ import LicensingImage from '../components/imageComponents/LicensingImage'
 
 const image = {
   flex: '1 0 40%',
-  margin: '10px',
+  margin: '20px',
   marginTop: '5%',
   alignSelf: 'center',
 }
 
 const bigImage = {
-  flex: '1 0 65%',
+  flex: '1 0 60%',
   margin: '10px',
   marginTop: '5%',
   alignSelf: 'center',
@@ -24,7 +24,7 @@ const bigImage = {
 
 const text = {
   flex: '1 0 50%',
-  margin: '5px',
+  margin: '15px',
   fontSize: 'large',
   alignSelf: 'center',
 }

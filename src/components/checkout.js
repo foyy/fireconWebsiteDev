@@ -41,7 +41,8 @@ const wrapper = {
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  margin: 'auto'
+  margin: 'auto',
+  fontFamily: 'times new roman, serif'
 }
 
 const form = {
@@ -75,7 +76,7 @@ const Checkout = class extends React.Component {
       disabled: false,
       buttonText: 'Proceed To Payment',
       paymentMessage: '',
-      amount: 44,
+      amount: 0,
       invoice: '',
       companyName: '',
       errorMessage: false
