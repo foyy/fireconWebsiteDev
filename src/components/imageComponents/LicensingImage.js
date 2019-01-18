@@ -30,7 +30,7 @@ const LicensingImage = () => {
       query {
         placeholderImage: file(relativePath: { eq: "generalStyling/licensingOnHomepage.png" }) {
           childImageSharp {
-            fluid(maxWidth: 240, maxHeight: 240) {
+            fluid(maxWidth: 500, maxHeight: 500) {
               ...GatsbyImageSharpFluid
               }
           }

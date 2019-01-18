@@ -31,7 +31,7 @@ const text = {
 
 
 const smallText = {
-  flex: '1 0 30%',
+  flex: '1 0 27%',
   margin: '2%',
   fontSize: 'large',
   alignSelf: 'center',
@@ -125,13 +125,14 @@ const IndexPage = () => (
 
 
 
-    <p style={smallText}>
-      Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
-      Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
-      Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
-      Licensing Information here.Licensing Information here.Licensing Information here.Licensing Information here.
-
-      </p>
+    <div style={smallText}>
+      TESTING TESTING TESTING TESTING TESTGIN
+      TESTING TESTING TESTING TESTING TESTGIN
+      TESTING TESTING TESTING TESTING TESTGIN
+      TESTING TESTING TESTING TESTING TESTGIN
+      TESTING TESTING TESTING TESTING TESTGIN
+    TESTING TESTING TESTING TESTING TESTGIN
+      </div>
 
     <div style={image}>
       <LicensingImage />
