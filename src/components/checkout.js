@@ -22,7 +22,7 @@ const cardStyles = {
   textAlign: 'left'
 }
 const buttonStyles = {
-  fontSize: '13px',
+  fontSize: '100%',
   textAlign: 'center',
   color: '#fff',
   outline: 'none',
@@ -32,13 +32,16 @@ const buttonStyles = {
   borderRadius: '6px',
   letterSpacing: '1.5px',
   marginLeft: '10px',
-  marginBottom: '5px'
+  marginBottom: '5px',
+  alignSelf: 'center',
 }
 
 const wrapper = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
+  alignItems: 'center',
+  margin: 'auto'
 }
 
 const form = {
@@ -70,11 +73,12 @@ const Checkout = class extends React.Component {
     //STATE
     this.state = {
       disabled: false,
-      buttonText: 'BUY NOW',
+      buttonText: 'Proceed To Payment',
       paymentMessage: '',
       amount: 44,
       invoice: '',
-      companyName: ''
+      companyName: '',
+      errorMessage: false
     }
     this.handleChange = this.handleChange.bind(this);
 
@@ -106,7 +110,7 @@ const Checkout = class extends React.Component {
     //so they are forced to enter an amount
     if (this.state.amount > 0 && this.state.companyName.length > 0 && this.state.invoice.length > 0) {
 
-      this.setState({ disabled: true, buttonText: 'WAITING...' })
+      this.setState({ disabled: true, buttonText: 'WAITING...', errorMessage: false })
       this.stripeHandler.open({
         name: 'Firecon Invoice Payment',
         amount: this.state.amount,
@@ -146,7 +150,7 @@ const Checkout = class extends React.Component {
         },
       })
     } else {
-      //INSERT ERROR MODAL HERE
+      this.setState({ errorMessage: true })
     }
   }
 
@@ -169,17 +173,31 @@ const Checkout = class extends React.Component {
     });
   }
 
+  errorMessageHandler = (e) => {
+    e.preventDefault();
+    if (this.state.amount > 0 && this.state.companyName.length > 0 && this.state.invoice.length > 0) {
+      this.setState({
+        errorMessage: false
+      })
+    }
+  }
+
 
   render() {
-    let { invoice, amount, companyName } = this.state;
+    let { invoice, amount, companyName, errorMessage } = this.state;
+    let error;
+    if (errorMessage === true) {
+      error = <p style={{ color: 'red', textAlign: 'center', fontSize: 'larger' }}>Please input company name, invoice#, and payment amount and try again</p>
+    } else {
+      error = <div></div>
+    }
     return (
       <div style={wrapper}>
         <div style={cardStyles}>
-          <button onClick={() => console.log('here is your state->', this.state)}></button>
+          {/* <button onClick={() => console.log('here is your state->', this.state)}></button> */}
 
-          <h1 style={{ alignSelf: 'center' }}>Pay your Invoice Below</h1>
-          <h5 style={{ paddingLeft: '12px' }}>You are required to input your Company Name, Invoice#, and Amount</h5>
-
+          <h1 style={{ alignSelf: 'center' }}>Pay your Invoice</h1>
+          <h6 style={{ paddingLeft: '12px', paddingBottom: '10px' }}>*You are required to input your Company Name, Invoice#, and Amount before proceeding to payment*</h6>
 
           {/* new form----> */}
           <Form className="form" onSubmit={event => this.changeAmount(event)}>
@@ -226,10 +244,10 @@ const Checkout = class extends React.Component {
                 />
               </FormGroup>
             </Col>
-            <Button style={{ marginLeft: '14px' }}>Submit</Button>
+            <Button style={{ marginLeft: '14px' }} onClick={e => this.errorMessageHandler(e)}>Submit</Button>
           </Form>
 
-
+          {error}
           <button
             style={buttonStyles}
             onClick={event => this.openStripeCheckout(event)}

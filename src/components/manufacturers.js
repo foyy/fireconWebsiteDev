@@ -15,8 +15,6 @@ import SupressionSystem from '../components/imageComponents/SupressionSystem'
 
 
 
-
-
 const wrapper = {
   display: 'flex',
   flexFlow: 'row wrap',
