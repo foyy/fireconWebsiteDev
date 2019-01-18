@@ -27,8 +27,16 @@ const Footer = () => (
   <div style={wrapper}>
 
     <div style={text}>
-      <p>123-456-7890</p>
-      <p>Footer address here</p>
+      <p>21300 Highway 71 West, Suite 400, Spicewood, Tx, 78669</p>
+      <p>512-404-9155</p>
+
+      <p>11550 N. North Loop Rd. , San Antonio, 78216 </p>
+      <p>210-258-4241</p>
+
+      <p>Alarm License#: ACR2294663</p>
+      <p>Extinguisher License#: ECR2295003</p>
+
+
       <ul>
         <li>  Footer Text here </li>
         <li>  Footer Text here </li>

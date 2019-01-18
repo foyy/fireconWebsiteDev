@@ -6,6 +6,9 @@ import TextBar from '../components/textBar'
 import HochikiImage from '../components/imageComponents/manufacturers/HochikiImage'
 import NfpaImage from '../components/imageComponents/NfpaImage'
 import LicensingImage from '../components/imageComponents/LicensingImage'
+import MinimalExtinguisher from '../components/imageComponents/MinimalExtinguisher'
+import Blueprints from '../components/imageComponents/Blueprints'
+
 
 const image = {
   flex: '1 0 40%',
@@ -70,11 +73,10 @@ const IndexPage = () => (
       <NfpaImage />
     </div>
     <p style={text}>
-      About us Information here. About us Information here About us Information here.
-      About us Information here About us Information here About us Information here
-      About us Information here About us Information here About us Information here
-      About us Information here About us Information here About us Information here
-      About us Information here About us Information here About us Information here About us Information here
+      Firecon of Texas is a family owned, operational life safety company that
+      has nearly 3 generations worth of experience behind it in the state of Texas.
+      Our technicians are knowledgeable and trained in servicing and installing
+      the latest technologies in fire alarm and suppression systems.
       </p>
 
     <div style={bar}>
@@ -98,7 +100,7 @@ const IndexPage = () => (
       more about us info here
       </p>
     <div style={image}>
-      <img src="https://cdn.pixabay.com/photo/2017/05/27/22/25/fire-extinguisher-2349638_960_720.png" alt="" />
+      <MinimalExtinguisher />
     </div>
 
 
@@ -106,7 +108,7 @@ const IndexPage = () => (
     <h1 style={singleLine}>Where We Work</h1>
 
     <div style={bigImage}>
-      <img src="https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg" alt="" />
+      <Blueprints />
     </div>
 
     <p style={smallText}>
@@ -127,13 +129,12 @@ const IndexPage = () => (
 
 
     <div style={smallText}>
-      TESTING TESTING TESTING TESTING TESTGIN
-      TESTING TESTING TESTING TESTING TESTGIN
-      TESTING TESTING TESTING TESTING TESTGIN
-      TESTING TESTING TESTING TESTING TESTGIN
-      TESTING TESTING TESTING TESTING TESTGIN
-    TESTING TESTING TESTING TESTING TESTGIN
-      </div>
+      <p>Fire Alarm</p>
+      <p>Special Hazards</p>
+      <p>Extinguisher</p>
+      <p>Monitoring</p>
+      <p>Security</p>
+    </div>
 
     <div style={image}>
       <LicensingImage />
