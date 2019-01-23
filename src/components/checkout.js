@@ -1,6 +1,4 @@
 import React from 'react'
-import axios from 'axios'
-import * as emailjs from 'emailjs-com';
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
@@ -123,7 +121,7 @@ const Checkout = class extends React.Component {
         billingAddress: true,
         zipCode: true,
         token: token => {
-          let amount = this.state.amount
+          let amount = (this.state.amount * 100)
           let invoice = this.state.invoice
           let companyName = this.state.companyName
           fetch(
@@ -159,23 +157,16 @@ const Checkout = class extends React.Component {
     }
   }
 
-  changeAmount(event) {
-    event.preventDefault()
-    console.log('sending off!', this.state)
-    // this.setState({
-    //   amount: this.textInput.value * 100,
-    //   invoice: this.invoiceInput.value
-    // })
-  }
 
   handleChange = async (event) => {
     const { target } = event;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const { name } = target;
     console.log('here is the name->', name)
-    await this.setState({
-      [name]: value,
-    });
+    if (this)
+      await this.setState({
+        [name]: value,
+      });
   }
 
   errorMessageHandler = (e) => {
@@ -202,7 +193,7 @@ const Checkout = class extends React.Component {
           {/* <button onClick={() => console.log('here is your state->', this.state)}></button> */}
 
           <h1 style={{ alignSelf: 'center', fontFamily: 'times new roman', fontSize: '360%', marginBottom: '8%' }}>Pay Your Invoice</h1>
-          <h6 style={{ paddingLeft: '12px', marginBottom: '8%', fontFamily: 'times new roman', }}>*You are required to input your Company Name, Invoice#, and Amount before proceeding to payment*</h6>
+          <h6 style={{ paddingLeft: '12px', marginBottom: '8%', fontFamily: 'times new roman', }}>*You are required to input your Company Name, Invoice #, and Amount before proceeding to payment*</h6>
 
           {/* new form----> */}
           <Form className="form" onSubmit={event => this.changeAmount(event)}>
@@ -284,36 +275,38 @@ export default Checkout
           </form > */}
 
 
-    // var data = {
-    //   service_id: '<gmail>',
-    //   template_id: '<template_2VgsUDkQ_clone>',
-    //   user_id: '<user_Ox28ZDXC8k3uwKZ9g3jcw>',
-    //   template_params: {
-    //     'invoice_number': 'James',
-    //     'amount': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
-    //   }
-    // };
-    // axios({
-    //   method: 'post',
-    //   url: 'https://api.emailjs.com/api/v1.0/email/send',
-    //   data: JSON.stringify(data),
-    //   contentType: 'application/json'
-    // }).then(() => {
-    //   console.log('Your mail is sent!!!!!!!');
-    // }).catch(err => {
-    //   console.log('we done messed up', err)
-    // })
+// var data = {
+//   service_id: '<gmail>',
+//   template_id: '<template_2VgsUDkQ_clone>',
+//   user_id: '<user_Ox28ZDXC8k3uwKZ9g3jcw>',
+//   template_params: {
+//     'invoice_number': 'James',
+//     'amount': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+//   }
+// };
+// axios({
+//   method: 'post',
+//   url: 'https://api.emailjs.com/api/v1.0/email/send',
+//   data: JSON.stringify(data),
+//   contentType: 'application/json'
+// }).then(() => {
+//   console.log('Your mail is sent!!!!!!!');
+// }).catch(err => {
+//   console.log('we done messed up', err)
+// })
 
-    //  this works!
-    // let templateParams = {
-    //   'invoice_number': '555',
-    //   'amount': 'a million'
-    // }
+//  this works!
+// let templateParams = {
+//   'invoice_number': '555',
+//   'amount': 'a million'
+// }
 
-    // emailjs.send('gmail', 'template_2VgsUDkQ_clone', templateParams, 'user_Ox28ZDXC8k3uwKZ9g3jcw')
-    //   .then((response) => {
-    //     console.log('SUCCESS!', response.status, response.text);
-    //   }, (err) => {
-    //     console.log('FAILED...', err);
-    //   });
+// emailjs.send('gmail', 'template_2VgsUDkQ_clone', templateParams, 'user_Ox28ZDXC8k3uwKZ9g3jcw')
+//   .then((response) => {
+//     console.log('SUCCESS!', response.status, response.text);
+//   }, (err) => {
+//     console.log('FAILED...', err);
+//   });
 
+// let videoSrc = `https://www.youtube.com/embed/${props.video.id.videoId} Oh wow look how cool that variable is taht I just passed in with this syntax ${templateLiteralSyntax}`;
+// let videoSrc = 'https://www.youtube.com/embed/' + props.vido.id.videoId + 'Oh wow look how cool that variable is taht I just passed in with this syntax' + templateLiteralSyntax; 
