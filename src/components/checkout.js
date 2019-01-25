@@ -114,14 +114,18 @@ const Checkout = class extends React.Component {
     if (this.state.amount > 0 && this.state.companyName.length > 0 && this.state.invoice.length > 0) {
 
       this.setState({ disabled: true, buttonText: 'WAITING...', errorMessage: false })
+      let stripeAmount = ((this.state.amount * 100) + ((this.state.amount * 100) * .03));
+      stripeAmount = stripeAmount;
+      console.log('checkoutPayment->', stripeAmount)
+      console.log('sentToPayment->', Number((stripeAmount / 100).toFixed(2)))
       this.stripeHandler.open({
         name: 'Firecon Invoice Payment',
-        amount: (this.state.amount * 100),
+        amount: stripeAmount,
         description: `Invoice #${this.state.invoice} Payment`,
         billingAddress: true,
         zipCode: true,
         token: token => {
-          let amount = (this.state.amount * 100)
+          let amount = (stripeAmount / 100).toFixed(2)
           let invoice = this.state.invoice
           let companyName = this.state.companyName
           fetch(
@@ -162,11 +166,10 @@ const Checkout = class extends React.Component {
     const { target } = event;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const { name } = target;
-    console.log('here is the name->', name)
-    if (this)
-      await this.setState({
-        [name]: value,
-      });
+    console.log('here is the value->', value)
+    await this.setState({
+      [name]: value,
+    });
   }
 
   errorMessageHandler = (e) => {
@@ -228,6 +231,10 @@ const Checkout = class extends React.Component {
             <Col>
               <FormGroup>
                 <Label >Payment Amount</Label>
+
+                <Label style={{ fontSize: '2%', fontStyle: 'italic', marginLeft: '5px' }} > A credit card processing fee of 3% will be automatically added to your invoice amount on payment screen</Label>
+
+
 
                 <Input
                   type="number"
