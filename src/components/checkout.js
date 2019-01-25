@@ -114,10 +114,12 @@ const Checkout = class extends React.Component {
     if (this.state.amount > 0 && this.state.companyName.length > 0 && this.state.invoice.length > 0) {
 
       this.setState({ disabled: true, buttonText: 'WAITING...', errorMessage: false })
+      //stripeAmount is for the payment widget since it does the conversion beofre payment. basically this is customer facing.
       let stripeAmount = ((this.state.amount * 100) + ((this.state.amount * 100) * .03));
       stripeAmount = stripeAmount;
       console.log('checkoutPayment->', stripeAmount)
       console.log('sentToPayment->', Number((stripeAmount / 100).toFixed(2)))
+
       this.stripeHandler.open({
         name: 'Firecon Invoice Payment',
         amount: stripeAmount,
@@ -125,6 +127,7 @@ const Checkout = class extends React.Component {
         billingAddress: true,
         zipCode: true,
         token: token => {
+          //this is for the actual stripe logic. Have to do this so it doesn't have too many decimals
           let amount = (stripeAmount / 100).toFixed(2)
           let invoice = this.state.invoice
           let companyName = this.state.companyName
