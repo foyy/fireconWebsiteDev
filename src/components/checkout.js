@@ -60,7 +60,7 @@ const label = {
 }
 
 const input = {
-  width: '200%'
+  width: '100%'
 }
 
 
@@ -236,8 +236,6 @@ const Checkout = class extends React.Component {
                 <Label >Payment Amount</Label>
 
                 <Label style={{ fontSize: '2%', fontStyle: 'italic', marginLeft: '5px' }} > A credit card processing fee of 3% will be automatically added to your invoice amount on payment screen</Label>
-
-
 
                 <Input
                   type="number"
